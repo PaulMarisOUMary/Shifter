@@ -49,7 +49,7 @@ core-install:
 	$(ARDUINO_CLI) core install arduino:avr
 
 compile:
-	$(ARDUINO_CLI) compile --fqbn $(FQBN) --warnings all --build-path $(BUILD_DIR) $(SKETCH)
+	$(ARDUINO_CLI) compile --fqbn $(FQBN) --warnings default --build-path $(BUILD_DIR) $(SKETCH)
 
 upload: compile
 	$(ARDUINO_CLI) upload -p $(PORT) --fqbn $(FQBN) --input-dir $(BUILD_DIR) $(SKETCH)
