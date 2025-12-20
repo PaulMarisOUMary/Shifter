@@ -60,3 +60,9 @@ monitor:
 clean:
 	$(CLEAN_CMD)
 
+venv:
+	py -m venv .venv
+	.venv\Scripts\python.exe -m pip install -r tools/requirements.txt
+
+images: venv
+	.venv\Scripts\python.exe tools/main.py -o $(SKETCH)/images.h -p "*_gear.png"
