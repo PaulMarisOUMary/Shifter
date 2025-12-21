@@ -53,7 +53,7 @@ Convert PNG images to RGB565 format for the display:
 make images
 ```
 
-This processes `img/*_gear.png` files and generates [src/images.h](src/images.h).
+This processes `img/*_gear.png` files and generates [src/images.h](/src/images.h).
 
 ## Project Structure
 
